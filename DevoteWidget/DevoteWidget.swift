@@ -7,7 +7,6 @@
 
 import WidgetKit
 import SwiftUI
-import Devote
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
@@ -41,6 +40,19 @@ struct SimpleEntry: TimelineEntry {
 
 struct DevoteWidgetEntryView : View {
     var entry: Provider.Entry
+    
+    @Environment(\.widgetFamily) var widgetFamily
+    var isSystemSmall: Bool {
+        widgetFamily == .systemSmall
+    }
+    
+    var fontStyle: Font {
+        if isSystemSmall {
+            return .system(.footnote, design: .rounded)
+        } else {
+            return .system(.headline, design: .rounded)
+        }
+    }
 
     var body: some View {
         GeometryReader { geometry in
@@ -53,18 +65,21 @@ struct DevoteWidgetEntryView : View {
                 
                 Image("logo")
                     .resizable()
-                    .frame(width: 36, height: 36)
+                    .frame(
+                        width: !isSystemSmall ? 56 : 36,
+                        height: !isSystemSmall ? 56 : 36
+                    )
                     .offset(
-                        x: (geometry.size.width/2) - 20,
+                        x: (geometry.size.width / 2) - 20,
                         y: (geometry.size.height / -2) + 20
                     )
-                    .padding(.top, 20)
-                    .padding(.trailing, 12)
+                    .padding(.top, !isSystemSmall ? 32 : 12)
+                    .padding(.trailing, !isSystemSmall ? 32 : 12)
                 
                 HStack {
                     Text("Just Do It")
                         .foregroundColor(.white)
-                        .font(.system(.footnote, design: .rounded))
+                        .font(fontStyle)
                         .fontWeight(.bold)
                         .padding(.horizontal, 12)
                         .padding(.vertical, 4)
@@ -73,6 +88,11 @@ struct DevoteWidgetEntryView : View {
                                 .blendMode(.overlay)
                         )
                     .clipShape(Capsule())
+                    
+                    if !isSystemSmall {
+                        Spacer()
+                    }
+                    
                 } //: HSTACK
                 .padding()
                 .offset(y: geometry.size.height/2 - 24)

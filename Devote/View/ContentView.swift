@@ -105,6 +105,8 @@ struct ContentView: View {
                     .padding(.vertical, 0)
                     .frame(maxWidth: 640)
                 } //: VSTACK
+                .blur(radius: showNewTaskItem ? 8.0 : 0, opaque: false)
+                .transition(.move(edge: .bottom))
                 
                 // MARK: - NEW TASK ITEM
                 
@@ -134,6 +136,7 @@ struct ContentView: View {
             } //: TOOLBAR
             .background(
                 BackgroundImageView()
+                    .blur(radius: showNewTaskItem ? 8.0 : 0, opaque: false)
             )
             .background(
                 backgroundGradient.ignoresSafeArea(.all)

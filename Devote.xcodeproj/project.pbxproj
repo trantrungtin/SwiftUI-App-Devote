@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D71A9F62284C890F00327DE8 /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71A9F61284C890F00327DE8 /* CheckboxStyle.swift */; };
 		D7261816284C5D5D00A803DF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7261815284C5D5D00A803DF /* Constant.swift */; };
 		D7261818284C6A9E00A803DF /* HideKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7261817284C6A9E00A803DF /* HideKeyboardExtension.swift */; };
 		D726181A284C6FF100A803DF /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7261819284C6FF100A803DF /* BackgroundImageView.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D71A9F61284C890F00327DE8 /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
 		D7261815284C5D5D00A803DF /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D7261817284C6A9E00A803DF /* HideKeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardExtension.swift; sourceTree = "<group>"; };
 		D7261819284C6FF100A803DF /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				D726181B284C72A000A803DF /* NewTaskItemView.swift */,
 				D726181D284C78B700A803DF /* BlankView.swift */,
 				D726181F284C841B00A803DF /* ListRowItemView.swift */,
+				D71A9F61284C890F00327DE8 /* CheckboxStyle.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				D7261820284C841B00A803DF /* ListRowItemView.swift in Sources */,
 				D7A8BAF4284C4D84008A2126 /* Devote.xcdatamodeld in Sources */,
 				D7A8BAE8284C4D82008A2126 /* DevoteApp.swift in Sources */,
+				D71A9F62284C890F00327DE8 /* CheckboxStyle.swift in Sources */,
 				D726181C284C72A000A803DF /* NewTaskItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

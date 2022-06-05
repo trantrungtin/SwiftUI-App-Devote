@@ -38,6 +38,9 @@ struct ContentView: View {
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
         }
+        
+        task = ""
+        hideKeyboard()
     }
 
     private func deleteItems(offsets: IndexSet) {
@@ -103,15 +106,10 @@ struct ContentView: View {
             } //: VSTACK
             .navigationBarTitle("Daily Tasks", displayMode: .large)
             .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
+                ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                 }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                } //: TOOLBAR
-            }
+            } //: TOOLBAR
         }
     }
 }

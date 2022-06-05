@@ -119,6 +119,9 @@ struct ContentView: View {
                 }
             } //: TOOLBAR
             .background(
+                BackgroundImageView()
+            )
+            .background(
                 backgroundGradient.ignoresSafeArea(.all)
             )
         } //: NAVIGATION

@@ -96,19 +96,7 @@ struct ContentView: View {
                     // MARK: - TASKS
                     List {
                         ForEach(items) { item in
-                            NavigationLink {
-                                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                            } label: {
-                                VStack(alignment: .leading) {
-                                    Text(item.task ?? "")
-                                        .font(.headline)
-                                        .fontWeight(.bold)
-                                    
-                                    Text(item.timestamp!, formatter: itemFormatter)
-                                        .font(.footnote)
-                                        .foregroundColor(.gray)
-                                }
-                            }
+                            ListRowItemView(item: item)
                         }
                             .onDelete(perform: deleteItems)
                     } //: LIST
@@ -156,6 +144,6 @@ struct ContentView: View {
 // MARK: - PREVIEW
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView().previewDevice("iPhone 13 Pro").environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

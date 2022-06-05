@@ -14,6 +14,8 @@
 		D71A9F71284C937400327DE8 /* DevoteWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71A9F70284C937400327DE8 /* DevoteWidget.swift */; };
 		D71A9F73284C937900327DE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D71A9F72284C937900327DE8 /* Assets.xcassets */; };
 		D71A9F77284C937900327DE8 /* DevoteWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D71A9F69284C937400327DE8 /* DevoteWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D71A9F7C284CA3CD00327DE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7A8BAEB284C4D84008A2126 /* Assets.xcassets */; };
+		D71A9F7D284CA45F00327DE8 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7261815284C5D5D00A803DF /* Constant.swift */; };
 		D7261816284C5D5D00A803DF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7261815284C5D5D00A803DF /* Constant.swift */; };
 		D7261818284C6A9E00A803DF /* HideKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7261817284C6A9E00A803DF /* HideKeyboardExtension.swift */; };
 		D726181A284C6FF100A803DF /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7261819284C6FF100A803DF /* BackgroundImageView.swift */; };
@@ -303,6 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D71A9F7C284CA3CD00327DE8 /* Assets.xcassets in Resources */,
 				D71A9F73284C937900327DE8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D71A9F71284C937400327DE8 /* DevoteWidget.swift in Sources */,
+				D71A9F7D284CA45F00327DE8 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
